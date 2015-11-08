@@ -1,0 +1,37 @@
+/* Search bar */
+header {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  z-index: 99;
+}
+
+md-toolbar {
+	padding: 10px;
+}
+
+/* Search Results Section */
+
+.searchResults {
+	clear: both;
+	overflow: hidden;
+}
+
+md-content {
+	height: 500px;
+}
+
+/*MD overrides */
+
+.md-subheader.md-default-theme.md-accent {
+	padding-left: 10px;
+}
+
+.md-list-item-text a {
+	color: red;
+}
+
+.md-list-item-text p span {
+	display: block;
+}
