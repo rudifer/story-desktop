@@ -4,10 +4,12 @@
 	<title>Stories doe</title>
   <base href="/storybase-desk/"></base>
 	<link rel="stylesheet" type="text/css" href="css/basic.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,700,800' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
 	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.js"></script>
@@ -15,9 +17,10 @@
 
 
 </head>
-<body ng-app="app"> 
+<body ng-app="app">
+  <a href="/storybase-desk/">home</a>
 
-	<div ng-view=""></div>
+	<div ng-view="" class="{{ viewClass }}"></div>
 
 	<script type="text/ng-template" id="main">
 		<div ng-repeat="post in pz" class="item card-item">
@@ -36,7 +39,7 @@
 	    <div class="content" ng-bind-html="post.content.rendered"></div>
     </div>
 
-		<a href="#">back to view (default)</a>
+
 	</script>
 
 </body>

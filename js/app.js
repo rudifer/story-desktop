@@ -1,4 +1,4 @@
-var app = angular.module('app', ['firebase', 'ngSanitize', 'ngRoute'])
+var app = angular.module('app', ['firebase', 'ngSanitize', 'ngRoute', 'ngAnimate'])
 
 app.controller("main", function($scope, $firebaseObject) {
   $scope.items = [1,2,3,4];
@@ -8,6 +8,7 @@ app.controller("main", function($scope, $firebaseObject) {
   // download the data into a local object
   $scope.posts = $firebaseObject(ref);
   console.log($scope.posts)
+  $scope.viewClass = 'animate-home';
 
   ref.on("value", function(snapshot) {
     console.log(snapshot.val());
@@ -30,6 +31,7 @@ app.controller("detail", function($scope, $routeParams, $firebaseObject) {
   // download the data into a local object
   $scope.post = $firebaseObject(ref);
   console.log($scope.post)
+  $scope.viewClass = 'animate-post';
 
 
   ref.on("value", function(snapshot) {
